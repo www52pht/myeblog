@@ -15,7 +15,6 @@ import java.util.Map;
 public abstract class TemplateDirective implements TemplateDirectiveModel {
     protected static String RESULT = "result";
     protected static String RESULTS = "results";
-
     @Override
     public void execute(Environment env, Map parameters,
                         TemplateModel[] loopVars, TemplateDirectiveBody body) throws TemplateException, IOException {

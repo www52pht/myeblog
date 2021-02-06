@@ -9,7 +9,7 @@ import javax.annotation.PostConstruct;
 
 /**
  * @author www
- * @creat 2021/1/29
+ * @create 2021/1/29
  */
 @Component
 public class FreemarkerConfig {

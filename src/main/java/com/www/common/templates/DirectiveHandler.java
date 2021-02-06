@@ -10,11 +10,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-/**
- * 引自mbog项目
- *
- * Created by langhsu on 2017/11/14.
- */
+
 public class DirectiveHandler {
     private Environment env;
     private Map<String, TemplateModel> parameters;
