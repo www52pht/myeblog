@@ -20,4 +20,8 @@ public interface MPostService extends IService<MPost> {
     IPage paging(Page page, Long categoryId, Long userId, Integer level, Boolean recommend, String order);
 
     MPostVo selectOnePost(QueryWrapper<MPost> wrapper);
+
+    void initWeekRank();
+
+    void incrCommentCountAndUnionForWeekRank(long postId, boolean isIncr);
 }

@@ -14,9 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class IndexController extends BaseController {
     @RequestMapping({"", "/", "/index"})
     public String index() {
-
-
-
         // 1、分页信息 2、分类 3、用户 4、置顶 5、精选 6、排序
         IPage results = mPostService.paging(getPage(), null, null, null, null, "created");
 

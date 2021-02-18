@@ -3,6 +3,7 @@ package com.www.config;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.www.entity.MCategory;
 import com.www.service.MCategoryService;
+import com.www.service.MPostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -23,12 +24,17 @@ public class ContextStarUp implements ApplicationRunner, ServletContextAware {
 
     ServletContext servletContext;
 
+    @Autowired
+    MPostService mPostService;
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
 
         List<MCategory> categories = mCategoryService.list(new QueryWrapper<MCategory>().eq("status", 0));
 
-        servletContext.setAttribute("categories",categories);
+        servletContext.setAttribute("categories", categories);
+
+        mPostService.initWeekRank();
     }
 
     @Override

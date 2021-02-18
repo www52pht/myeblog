@@ -19,7 +19,6 @@ import javax.swing.plaf.nimbus.NimbusLookAndFeel;
  */
 @Controller
 public class PostController extends BaseController {
-
     //:\d*指定参数为数字类型
     @GetMapping("/category/{id:\\d*}")
     public String category(@PathVariable(name = "id") Long id) {
